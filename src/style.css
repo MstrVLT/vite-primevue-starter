@@ -1,0 +1,28 @@
+@import "normalize.css" layer(normalize-reset);
+
+@import "inter.css";
+
+@import 'primeicons/primeicons.css';
+
+:root {
+    font-size: 14px;
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: InterVariable, sans-serif;
+    }
+}
+
+@layer tailwind-base, normalize, primevue, tailwind-utilities;
+
+@layer tailwind-base {
+    @tailwind base;
+}
+
+@layer tailwind-utilities {
+    @tailwind components;
+    @tailwind utilities;
+}
