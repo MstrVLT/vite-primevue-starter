@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@primevue/themes": "^4.0.0",
-    "normalize.css": "^8.0.1",
     "primeicons": "^7.0.0",
     "primevue": "^4.0.0",
     "tailwindcss-primeui": "^0.3.2",
