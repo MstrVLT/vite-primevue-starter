@@ -4,9 +4,10 @@ import Toolbar from 'primevue/toolbar'
 import InputIcon from 'primevue/inputicon'
 import InputText from 'primevue/inputtext'
 import IconField from 'primevue/iconfield'
-import SplitButton  from 'primevue/splitbutton'
+import SplitButton from 'primevue/splitbutton'
+import { PrinterIcon } from '@heroicons/vue/20/solid'
 
-import {ref} from "vue";
+import { ref } from "vue";
 
 const items = ref([
   {
@@ -23,10 +24,14 @@ const items = ref([
 
 <template>
   <div class="card">
-    <Toolbar>
+    <Toolbar :pt="{ root: { class: 'rounded-none border-0 border-b' } }">
       <template #start>
         <Button icon="pi pi-plus" class="mr-2" severity="secondary" text />
-        <Button icon="pi pi-print" class="mr-2" severity="secondary" text />
+        <Button class="mr-2" severity="secondary" text>
+          <template #icon>
+            <PrinterIcon class="size-5" />
+          </template>
+        </Button>
         <Button icon="pi pi-upload" severity="secondary" text />
       </template>
 
@@ -39,11 +44,12 @@ const items = ref([
         </IconField>
       </template>
 
-      <template #end> <SplitButton label="Save" :model="items"></SplitButton></template>
+      <template #end>
+        <SplitButton label="Save" :model="items"></SplitButton>
+      </template>
     </Toolbar>
   </div>
 </template>
 
 <style scoped>
-
 </style>

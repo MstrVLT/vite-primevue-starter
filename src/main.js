@@ -47,10 +47,7 @@ app.use(PrimeVue, {
         preset: Fractal,
         options: {
             darkModeSelector: '.fractal-app-dark',
-            cssLayer: {
-                name: 'primevue',
-                order: 'tailwind-base, primevue, tailwind-utilities'
-            }
+
         }
     }
  });
